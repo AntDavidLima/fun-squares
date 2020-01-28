@@ -1,5 +1,6 @@
 const addSqrBtn = document.getElementById('addSquare');
 const addCclBtn = document.getElementById('addCircle');
+const cleanBtn = document.getElementById('clean');
 const body = document.getElementById('squares');
 
 function getRandomColor() {
@@ -34,4 +35,8 @@ addCclBtn.onclick = () => {
     circle.style.backgroundColor = getRandomColor();
   }
   body.appendChild(circle);
+}
+
+cleanBtn.onclick = () => {
+  body.innerHTML = '';
 }
