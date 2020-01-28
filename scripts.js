@@ -1,4 +1,5 @@
-const addSqrBtn = document.querySelector('div#controller button');
+const addSqrBtn = document.getElementById('addSquare');
+const addCclBtn = document.getElementById('addCircle');
 const body = document.getElementById('squares');
 
 function getRandomColor() {
@@ -21,3 +22,16 @@ addSqrBtn.onclick = () => {
   }
   body.appendChild(square);
 };
+
+addCclBtn.onclick = () => {
+  const circle = document.createElement('div');
+  circle.setAttribute('class', 'ccl');
+  circle.style.background = '#f00';
+  circle.style.width = '100px';
+  circle.style.height = '100px';
+  circle.style.borderRadius = '100px';
+  circle.onmouseover = () => {
+    circle.style.backgroundColor = getRandomColor();
+  }
+  body.appendChild(circle);
+}
